@@ -7,20 +7,108 @@
     <title>Konya</title>
     <link rel="stylesheet" href="./style.css">
     <style>
-        h1{text-align: center;color: white;font-family: 'Courier New', Courier, monospace;font-style: italic;}
+        h1{text-align: center;color: orangered;font-family: 'Courier New', Courier, monospace;font-style: italic;font-size: 90px;}
+        p{text-align: center; color: darkorange; font-family: 'Courier New', Courier, monospace;font-style: italic; font-size: 20px;}
+        h2{text-align: center;color: orangered;font-family: 'Courier New', Courier, monospace;font-style: italic;font-size: 90px;}
+        @keyframes blink 
+        {
+			0% { opacity: 1.0; }
+			50% { opacity: 0.5; }
+			100% { opacity: 1.0; }
+		}
+        .blinking-text
+        {
+            animation: blink 2s linear infinite;
+            animation-delay: 0s;
+            animation-iteration-count: infinite;
+            animation-fill-mode: both;
+            animation-timing-function: ease-in-out;
+            animation-direction: alternate;
+            animation-play-state: running;
+        }
+        *
+        {
+            box-sizing: border-box;
+        }
+        .zoom
+        {
+            padding: 50px;
+            background-image: url("kelebeklervadisi.jpg");
+            transition: transform .2s;
+            width: 500px;
+            height: 250px;
+            margin: 0 auto;
+        }
+        .zoom:hover
+        {
+            -ms-transform: scale(1.5);
+            -webkit-transform: scale(1.5);
+            transform: scale(1.5);
+        }
+        .zoom-out
+        {
+            display: inline-block;
+            overflow: hidden;
+            position: relative;
+        }
+        .zoom-out img
+        {
+            transition: transform 0.5s ease;
+        }
+        .zoom-out:hover img
+        {
+            transform: scale(0.8);
+        }
+        .transparency
+        {
+            opacity: 0.5;
+        }
+        .transparency:hover
+        {
+            opacity: 1.0;
+        }
     </style>
 </head>
 <body>
     <div class="slider">
-        <h1>KONYA</h1><br><br><br>
+        <div>
+            <h1><span class="blinking-text color-changing-text">KONYA</span></h1><br>
+        </div>
+        <p>Konya, Türkiye'nin yüzölçümü bakımından en büyük ili ve en kalabalık altıncı şehridir.Ekonomik açıdan Türkiye'nin gelişmiş kentlerinden biri olan Konya <u>doğal ve tarihsel zenginlikleriyle</u> de önem taşır.</p><br>
+        <div class="zoom-out">
+            <img src="sunflower.jpg" alt="sunflower" class="center" width="750" height="500">
+        </div>
+        <div>
+            <h2><span class="blinking-text color-changing-text">MEVLANA</span></h2><br><br>
+        </div>
+        <div class="zoom-in">
+            <img src="mevlana.jpg" alt="mevlana" class="center">
+        </div>
+        <br><br>
+        <p>Mevlana Celaleddin-i Rumi, 13.yüzyılda yaşamış büyük bir <b>İslam düşünürü</b>, <b>şair</b> ve <b>mutasavvıftır</b>.Mevlana'nın hayatı ve öğretileri İslam dünyasının yanı sıra dünya genelinde büyük bir etki yaratmıştır.</p><br><br>
+        <div>
+            <h2><span class="blinking-text color-changing-text">KELEBEK BAHÇEŞİ</span></h2><br><br>
+        </div><br><br>
+        <div class="zoom"></div><br><br><br><br>
+        <p>Tropikal ülkelerden gelen ve <b>45 farklı türdeki</b> yaklaşık <b>10 bin kelebeğe</b> doğal yaşam alanı sunan Konya Tropikal Kelebek Bahçesi’nde ayrıca farklı hayvan türleri ile birlikte <b>98 türe</b> ait yaklaşık <b>20 bin adet</b> bitki yer almaktadır.</p><br><br><br>
+        <div>
+            <h2><span class="blinking-text color-changing-text">KYOTO JAPON PARKI</span></h2><br><br>
+        </div><br><br>
+        <div class="transparency">
+            <img src="kyotoparkı.jpg" alt="kyotoparkı" class="center" width="1000" height="500">
+        </div><br><br>
+        <p>Türkiye’nin “en büyük Japon bahçesi” unvanına sahip olan <b>36 bin metrekarelik</b> bir alanı kaplamaktadır</p><br>
+        <div>
+            <h2><span class="blinking-text color-changing-text">GÖRSELLER</span></h2><br><br>
+        </div>
         <div class="images">    
             <input type="radio" name="slide" id="konya1" checked>
             <input type="radio" name="slide" id="konya2">
             <input type="radio" name="slide" id="konya3">
 
-            <img src="konya1.jpg" class="m1" alt="konya1">
-            <img src="konya2.jpg" class="m2" alt="konya2">
-            <img src="konya3.jpg" class="m3" alt="konya3">
+            <img src="konya1.jpg" class="m1" alt="konya1" style="width: 100%;">
+            <img src="konya2.jpg" class="m2" alt="konya2" style="width: 100%;">
+            <img src="konya3.jpg" class="m3" alt="konya3" style="width: 100%;">
         </div>
         <div class="dots">
             <label for="konya1"></label>
